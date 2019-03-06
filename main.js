@@ -7,14 +7,14 @@ function validate(){
 
 	if ( username == "skydream" && password == "skydreamweb"){ //check if username and password match
 		alert ("Login successfully");
-		window.location = "success.html"; //redirecting to other page
+		window.location = "success.html"; //redirecting to successful login page
 		return false;
 	}
 	else{
 		attempt --; // decrementing by one for every tried login
 		alert("You have left "+attempt+" attempt!");
 
-		// disabling fields after 3 attempts
+		// disabling all input fields after 3 attempts
 		if( attempt == 0){
 			document.getElementById("username").disabled = true;
 			document.getElementById("password").disabled = true;
